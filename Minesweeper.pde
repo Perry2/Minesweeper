@@ -14,7 +14,12 @@ void setup ()
     
     // make the manager
     Interactive.make( this );
-    
+    buttons = new MSButton[NUM_ROWS][NUM_COLS];
+    for(int i = 0; i < buttons.length; i++){
+        for(int a = 0; a < buttons[i].length; a++){
+            buttons[i][a] = new MSButton(i,a);
+        }
+    }
     //your code to initialize buttons goes here
     
     
@@ -24,6 +29,9 @@ void setup ()
 public void setBombs()
 {
     //your code
+    private int brow = (int)(Math.random()*NUM_ROWS);
+    private int bcol = (int)(Math.random()*NUM_COLS);
+    if(!bombs.contains())
 }
 
 public void draw ()
@@ -55,8 +63,8 @@ public class MSButton
     
     public MSButton ( int rr, int cc )
     {
-        // width = 400/NUM_COLS;
-        // height = 400/NUM_ROWS;
+         width = 400/NUM_COLS;
+         height = 400/NUM_ROWS;
         r = rr;
         c = cc; 
         x = c*width;
