@@ -29,7 +29,7 @@ void setup ()
 public void setBombs()
 {
     //your code
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < 100; i++){
         int brow = (int)(Math.random()*20);
         int bcol = (int)(Math.random()*20);
         if(!bombs.contains(buttons[brow][bcol]))
