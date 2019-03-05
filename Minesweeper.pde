@@ -111,15 +111,23 @@ public class MSButton
     {
         label = newLabel;
     }
-    public boolean isValid(int r, int c)
+    public boolean isValid(int row, int col)
     {
         //your code here
+        if(row >= 0 && row < NUM_ROWS && col >= 0 && col < NUM_COLS)
+            return true;
         return false;
     }
     public int countBombs(int row, int col)
     {
         int numBombs = 0;
-        //your code here
+        for (int i = row - 1; i <= row + 1; i++) {
+            for(int a = col - 1; i <= col + 1; a++){
+                if(isValid(i,a) == true)
+                    if(bombs.contains(buttons[i][a]))
+                        numBombs++;
+            }
+        }
         return numBombs;
     }
 }
