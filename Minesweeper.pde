@@ -90,7 +90,7 @@ public class MSButton
     {
         clicked = true;
         //your code here
-        if(mouseButton == RIGHT)
+        /*if(mouseButton == RIGHT)
             marked = true || false;
             if(marked == false)
                 clicked = false;
@@ -99,7 +99,12 @@ public class MSButton
         else if(countBombs(pmouseX,pmouseY) > 0)
             setLabel(""+countBombs(pmouseX,pmouseY));
         else
-            mousePressed();
+            if(isValid(r-1,c)){
+                if(buttons[r-1][c].isMarked())
+                    r++;
+            }
+            buttons[r-1][c].mousePressed();
+            */
     }
 
     public void draw () 
